@@ -15,6 +15,8 @@ from src.components.Data_Ingestion import DataIngestion  # Corrected import
 
 @dataclass
 class DataTransformationConfig:
+    #saving the preprocessor object into a pickle file 
+    #os.path.join() ensures that the file path is correctly formed, especially if you're working with multiple OS platforms.
     preprocessor_obj_file_path = os.path.join('artifacts', "preprocessor.pkl")
 
 class DataTransformation:
@@ -22,6 +24,7 @@ class DataTransformation:
         self.data_transformation_config = DataTransformationConfig()  # Instantiate configuration class
 
     def get_data_transformer_object(self):
+        #actual data trnsformation happens here 
         try:
             numerical_features = ["writing score", "reading score"]
             categorical_features = ['gender', 'race/ethnicity', 
@@ -113,12 +116,12 @@ class DataTransformation:
 
 
 # to check the code
-if __name__ == '__main__':
-    obj = DataIngestion()  # Correct instantiation
+# if __name__ == '__main__':
+#     obj = DataIngestion()  # Correct instantiation
 
-    # Call the data ingestion method
-    train_data, test_data = obj.initiate_data_ingestion()
+#     # Call the data ingestion method
+#     train_data, test_data = obj.initiate_data_ingestion()
 
-    # Perform data transformation
-    data_transformation = DataTransformation()
-    data_transformation.initiate_data_transformation(train_data, test_data)
+#     # Perform data transformation
+#     data_transformation = DataTransformation()
+#     data_transformation.initiate_data_transformation(train_data, test_data)
