@@ -21,6 +21,6 @@ logging.basicConfig(
     level=logging.INFO  # Set the logging level to INFO (logs messages with level INFO and above)
 )
 
-
-if __name__ == "__main__":
-    logging.info("Logging has started")
+# only to check if the logger code is running 
+# if __name__ == "__main__":
+#     logging.info("Logging has started")

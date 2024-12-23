@@ -1,6 +1,5 @@
 import sys  # For interacting with system, especially for exception details
-import logging  # For logging messages
-from logger import logging  # Import the configured logger from logger.py
+from src.logger import logging  # Import the configured logger from logger.py
 
 # Function to generate detailed error message
 def error_message_detail(error, error_detail: sys):
