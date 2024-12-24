@@ -52,7 +52,7 @@ class DataIngestion:
             raise CustomException("Error in data ingestion: " + str(e))  
 
 
-#to check if your code is running
+# # to check if your code is running
 # if __name__== "__main__":
 #     obj = DataIngestion()
 #     obj.initiate_data_ingestion()

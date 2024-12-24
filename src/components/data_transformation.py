@@ -115,7 +115,7 @@ class DataTransformation:
             raise CustomException(e, sys)
 
 
-# to check the code
+# # to check the code
 # if __name__ == '__main__':
 #     obj = DataIngestion()  # Correct instantiation
 
